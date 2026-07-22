@@ -1,106 +1,326 @@
-import Link from 'next/link';
+/**
+ * page.tsx — LANDING PAGE (satu file utuh)
+ * ===========================================================================
+ * Semua section digabung di sini sesuai permintaan. Supaya tetap mudah
+ * dibaca, tiap section dipecah jadi fungsi lokal (bukan file terpisah)
+ * dengan komentar di atasnya menjelaskan fungsinya masing-masing:
+ *
+ *   Navbar()  -> header sticky: logo, menu, tombol "Hubungi"
+ *   Hero()    -> section paling atas: judul besar + foto (placeholder)
+ *   About()   -> section "About Me": bio singkat + 3 fakta cepat
+ *   Skills()  -> grid keahlian & teknologi
+ *   Projects()-> grid portfolio project (masih data contoh)
+ *   Cta()     -> ajakan kontak/kolaborasi
+ *   Footer()  -> baris hak cipta paling bawah
+ *
+ * Home() di paling bawah cuma menyusun urutan section-section di atas.
+ * Kalau mau ubah urutan tampilan, tinggal pindah urutan pemanggilan
+ * komponen di dalam Home().
+ * ===========================================================================
+ */
 
-export default function Home() {
+// ---------------------------------------------------------------------------
+// DATA — dikumpulkan di atas biar gampang diedit tanpa bongkar JSX di bawah
+// ---------------------------------------------------------------------------
+
+const NAV_LINKS = [
+  { label: "HOME", href: "#home" },
+  { label: "ABOUT", href: "#about" },
+  { label: "PROJECT", href: "#project" },
+  { label: "SKILLS", href: "#skills" },
+];
+
+const SKILLS = [
+  { title: "Web Dasar", desc: "HTML, CSS, JavaScript" },
+  { title: "Framework", desc: "Next.js, Tailwind CSS" },
+  { title: "Python", desc: "Computer Vision, Tracking" },
+  { title: "Tools", desc: "Git, GitHub, Vercel" },
+];
+
+const FACTS = [
+  { label: "FOKUS", value: "Frontend Dev" },
+  { label: "STATUS", value: "Pelajar" },
+  { label: "MINAT LAIN", value: "Data & Saham" },
+];
+
+// *contoh placeholder* — ganti title/desc/tags/href sesuai project asli kamu
+const PROJECTS = [
+  {
+    title: "Portfolio Website",
+    desc: "Website personal dibangun dengan Next.js & Tailwind CSS, fokus pada performa dan desain minimalis.",
+    tags: ["Next.js", "Tailwind"],
+    href: "#",
+  },
+  {
+    title: "Dashboard Analisis Saham",
+    desc: "Dashboard untuk memantau saham perbankan dividen tinggi dan pergerakan structured warrants.",
+    tags: ["Python", "Data"],
+    href: "#",
+  },
+  {
+    title: "Object Tracking App",
+    desc: "Eksperimen computer vision untuk mendeteksi dan melacak objek secara real-time dengan Python.",
+    tags: ["OpenCV", "Python"],
+    href: "#",
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Navbar — header sticky di atas halaman
+// ---------------------------------------------------------------------------
+function Navbar() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 font-sans">
-      
-      {/* 
-        NAVBAR 
-        Posisi dibuat sticky agar tetap di atas saat di-scroll, 
-        layout dijamin rapi dan nggak geser-geser.
-      */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex-shrink-0 font-bold text-xl text-cyan-400 tracking-wider">
-              REN.
+    <nav className="sticky top-0 z-50 glass border-b">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center gap-2.5">
+            <span className="logo-badge font-display font-bold text-sm text-[var(--blue-300)]">
+              RR
+            </span>
+            <span className="font-display font-semibold hidden sm:inline text-[var(--ice)]">
+              Rochwidias
+            </span>
+          </div>
+
+          <div className="hidden md:flex items-center gap-8 font-mono text-xs eyebrow text-[var(--muted)]">
+            {NAV_LINKS.map((link) => (
+              <a key={link.href} href={link.href} className="nav-link hover:text-white transition-colors">
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <a href="#kontak" className="btn-primary text-white font-display text-sm font-semibold py-2.5 px-5 rounded-lg">
+            Hubungi
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Hero — section perkenalan paling atas
+//
+// Foto di kanan MASIH PLACEHOLDER. Cara ganti dengan fotomu:
+//   1. Taruh file di /public, misal /public/photo.jpg
+//   2. import Image from "next/image"; di baris paling atas file ini
+//   3. Ganti isi <div className="photo-frame ..."> dengan:
+//        <Image src="/photo.jpg" alt="Rencaesar Rochwidias" fill className="object-cover" />
+//      (tambahkan class "relative" ke div pembungkusnya karena `fill` butuh parent relative)
+// ---------------------------------------------------------------------------
+function Hero() {
+  return (
+    <section id="home" className="max-w-6xl mx-auto px-6 lg:px-8 pt-16 pb-20 md:pt-8">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span className="font-mono text-xs eyebrow inline-block mb-5 px-4 py-1.5 rounded-full glass text-[var(--blue-300)]">
+            HALO, SAYA RENCAESAR ROCHWIDIAS
+          </span>
+
+          <h1 className="font-display text-5xl md:text-6xl font-bold leading-[1.05] mb-6 text-[var(--ice)]">
+            Saya Suka
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-blue-600">
+              Membangun.
+            </span>
+          </h1>
+
+          <p className="text-base md:text-lg max-w-md mb-8 leading-relaxed text-[var(--muted)]">
+            Frontend Web Developer yang fokus membangun pengalaman digital yang bersih, interaktif, dan responsif —
+            dari antarmuka web sampai eksplorasi data.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a href="#kontak" className="btn-primary text-white font-semibold py-3 px-8 rounded-xl font-display">
+              Hubungi Saya
+            </a>
+            <a href="#project" className="btn-ghost text-white font-semibold py-3 px-8 rounded-xl font-display">
+              Lihat Project
+            </a>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center lg:justify-end">
+          {/* PLACEHOLDER foto — lihat komentar di atas fungsi Hero() */}
+          <div className="photo-frame glass w-full max-w-sm aspect-[4/5] relative flex flex-col items-center justify-center gap-3 text-center px-6">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="1.5">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+            </svg>
+            <p className="font-mono text-xs text-[var(--muted)]">
+              Ganti area ini dengan fotomu
+              <br />
+              (public/photo.jpg)
+            </p>
+          </div>
+
+          <div className="chip absolute -bottom-4 left-4 md:left-0 rounded-xl px-4 py-2.5 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-green-400" />
+            <span className="font-mono text-xs text-[var(--ice)]">Terbuka untuk kolaborasi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// About — section "About Me": avatar placeholder + bio + fakta singkat
+// ---------------------------------------------------------------------------
+function About() {
+  return (
+    <section id="about" className="py-24 border-y border-[var(--surface-border)]">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 grid md:grid-cols-5 gap-12 items-start">
+        <div className="md:col-span-2 flex justify-center md:justify-start">
+          <div className="glass rounded-2xl w-full max-w-xs aspect-square flex items-center justify-center">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="1.5">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+            </svg>
+          </div>
+        </div>
+
+        <div className="md:col-span-3">
+          <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">ABOUT ME</span>
+          <h2 className="font-display text-3xl font-bold mt-3 mb-5 text-[var(--ice)]">Sedikit tentang saya</h2>
+          <p className="leading-relaxed mb-4 text-[var(--muted)]">
+            Saya pelajar sekaligus Frontend Web Developer yang antusias membangun pengalaman digital yang interaktif,
+            bersih, dan responsif menggunakan ekosistem React dan Next.js.
+          </p>
+          <p className="leading-relaxed mb-8 text-[var(--muted)]">
+            Di luar coding, saya juga aktif memantau pasar saham — khususnya saham perbankan dividen tinggi — dan
+            bereksperimen dengan Python untuk computer vision & tracking.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {FACTS.map((fact) => (
+              <div key={fact.label} className="glass rounded-xl px-4 py-3">
+                <p className="font-mono text-[10px] eyebrow text-[var(--blue-300)]">{fact.label}</p>
+                <p className="font-display font-semibold mt-1 text-sm text-[var(--ice)]">{fact.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Skills — grid keahlian & teknologi
+// ---------------------------------------------------------------------------
+function Skills() {
+  return (
+    <section id="skills" className="py-24">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">KEAHLIAN & TEKNOLOGI</span>
+          <h2 className="font-display text-3xl font-bold mt-3 text-[var(--ice)]">Tools yang saya pakai</h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {SKILLS.map((skill) => (
+            <div key={skill.title} className="glass glass-hover rounded-2xl p-6 text-center">
+              <h3 className="font-display font-semibold text-[var(--ice)]">{skill.title}</h3>
+              <p className="text-sm mt-1.5 text-[var(--muted)]">{skill.desc}</p>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <Link href="#home" className="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                <Link href="#skills" className="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</Link>
-                <Link href="#projects" className="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Projects — grid portfolio project (PROJECTS di atas masih data contoh)
+// ---------------------------------------------------------------------------
+function Projects() {
+  return (
+    <section id="project" className="py-24 border-t border-[var(--surface-border)]">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-14">
+          <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">PROJECT</span>
+          <h2 className="font-display text-3xl font-bold mt-3 text-[var(--ice)]">Beberapa hal yang saya kerjakan</h2>
+          <p className="font-mono text-xs mt-3 text-[var(--muted)]">*contoh placeholder — ganti dengan project asli kamu</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {PROJECTS.map((project) => (
+            <div key={project.title} className="glass glass-hover rounded-2xl overflow-hidden">
+              <div className="project-thumb h-40" />
+              <div className="p-6">
+                <h3 className="font-display font-semibold mb-2 text-[var(--ice)]">{project.title}</h3>
+                <p className="text-sm mb-4 text-[var(--muted)]">{project.desc}</p>
+                <div className="flex gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="font-mono text-[10px] px-2 py-1 rounded-full chip text-[var(--blue-300)]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={project.href} className="text-sm font-semibold text-[var(--blue-300)]">
+                  Lihat Detail →
+                </a>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      </nav>
+      </div>
+    </section>
+  );
+}
 
-      {/* HERO SECTION (Bagian Utama) */}
-      <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col justify-center items-center text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
-          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Rencaesar Rochwidias</span>
-        </h1>
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">
-          Pelajar & Frontend Web Developer yang antusias membangun pengalaman digital yang interaktif, bersih, dan responsif.
+// ---------------------------------------------------------------------------
+// Cta — panel ajakan kontak/kolaborasi
+// ---------------------------------------------------------------------------
+function Cta() {
+  return (
+    <section id="kontak" className="max-w-6xl mx-auto px-6 lg:px-8 pb-24">
+      <div className="glass rounded-3xl p-10 md:p-14 text-center">
+        <h2 className="font-display text-2xl md:text-3xl font-bold mb-3 text-[var(--ice)]">
+          Tertarik untuk berkolaborasi?
+        </h2>
+        <p className="max-w-xl mx-auto mb-8 text-[var(--muted)]">
+          Terbuka untuk diskusi proyek, kolaborasi, atau sekadar ngobrol soal frontend dan data.
         </p>
-        <div className="flex gap-4">
-          <a href="#projects" className="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold py-3 px-8 rounded-lg transition-transform hover:scale-105">
-            Lihat Portfolio
-          </a>
-          <a href="https://github.com/Rochwidias" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg border border-slate-700 transition-all">
-            GitHub Saya
-          </a>
-        </div>
-      </section>
+        <a
+          href="https://github.com/Rochwidias"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block btn-primary text-white font-semibold py-3 px-8 rounded-xl font-display"
+        >
+          Hubungi via GitHub
+        </a>
+      </div>
+    </section>
+  );
+}
 
-      {/* SKILLS SECTION */}
-      <section id="skills" className="bg-slate-900 py-20 border-y border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Keahlian & Teknologi</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            
-            <div className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-colors">
-              <h3 className="font-semibold text-lg text-cyan-400">Web Dasar</h3>
-              <p className="text-slate-400 text-sm mt-2">HTML, CSS, JavaScript</p>
-            </div>
-            
-            <div className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-colors">
-              <h3 className="font-semibold text-lg text-cyan-400">Framework</h3>
-              <p className="text-slate-400 text-sm mt-2">Next.js, Tailwind CSS</p>
-            </div>
-            
-            <div className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-colors">
-              <h3 className="font-semibold text-lg text-cyan-400">Python</h3>
-              <p className="text-slate-400 text-sm mt-2">Computer Vision, Tracking</p>
-            </div>
-            
-            <div className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition-colors">
-              <h3 className="font-semibold text-lg text-cyan-400">Tools</h3>
-              <p className="text-slate-400 text-sm mt-2">Git, GitHub, Vercel</p>
-            </div>
+// ---------------------------------------------------------------------------
+// Footer — baris hak cipta paling bawah
+// ---------------------------------------------------------------------------
+function Footer() {
+  return (
+    <footer className="py-8 border-t border-[var(--surface-border)] text-center font-mono text-xs text-[var(--muted)]">
+      <p>&copy; {new Date().getFullYear()} Rencaesar Rochwidias — Dibuat dengan Next.js & Tailwind CSS</p>
+    </footer>
+  );
+}
 
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECTS & INTERESTS SECTION */}
-      <section id="projects" className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">Fokus Saat Ini</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          
-          <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)] transition-shadow">
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Frontend Development</h3>
-            <p className="text-slate-400 leading-relaxed">
-              Membangun dan merancang website portfolio serta aplikasi web interaktif menggunakan ekosistem React dan Next.js. Sangat menjaga struktur kode yang rapi agar mudah dikembangkan.
-            </p>
-          </div>
-          
-          <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)] transition-shadow">
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Analisis Data & Keuangan</h3>
-            <p className="text-slate-400 leading-relaxed">
-              Selain dunia coding, saya juga aktif memantau pasar saham, khususnya menganalisis saham perbankan dividen tinggi dan pengelolaan *structured warrants* hingga jatuh tempo.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="bg-slate-950 py-8 border-t border-slate-900 text-center text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Rencaesar Rochwidias. Dibuat dengan Next.js & Tailwind CSS.</p>
-      </footer>
-      
+// ---------------------------------------------------------------------------
+// Home — merangkai semua section di atas. Ini satu-satunya export dari file.
+// ---------------------------------------------------------------------------
+export default function Home() {
+  return (
+    <main className="min-h-screen font-sans">
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Cta />
+      <Footer />
     </main>
   );
 }
