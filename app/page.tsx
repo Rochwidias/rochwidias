@@ -89,10 +89,6 @@ function Navbar() {
               </a>
             ))}
           </div>
-
-          <a href="#kontak" className="btn-primary text-white font-display text-sm font-semibold py-2.5 px-5 rounded-lg">
-            Hubungi
-          </a>
         </div>
       </div>
     </nav>
@@ -115,14 +111,14 @@ function Hero() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <span className="font-mono text-xs eyebrow inline-block mb-5 px-4 py-1.5 rounded-full glass text-[var(--blue-300)]">
-            HALO, SAYA RENCAESAR ROCHWIDIAS
+            WELCOME
           </span>
 
           <h1 className="font-display text-5xl md:text-6xl font-bold leading-[1.05] mb-6 text-[var(--ice)]">
-            Saya Suka
+            My name
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-blue-600">
-              Membangun.
+            <span className="text-transparent bg-clip-text bg-blue-600">
+              is Ren
             </span>
           </h1>
 
@@ -149,9 +145,8 @@ function Hero() {
               <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
             </svg>
             <p className="font-mono text-xs text-[var(--muted)]">
-              Ganti area ini dengan fotomu
               <br />
-              (public/photo.jpg)
+              (public/muka.jpg)
             </p>
           </div>
 
