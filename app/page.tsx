@@ -1,26 +1,26 @@
 /**
- * page.tsx — LANDING PAGE (satu file utuh)
+ * page.tsx — LANDING PAGE (one whole file)
  * ===========================================================================
- * Semua section digabung di sini sesuai permintaan. Supaya tetap mudah
- * dibaca, tiap section dipecah jadi fungsi lokal (bukan file terpisah)
- * dengan komentar di atasnya menjelaskan fungsinya masing-masing:
+ * All sections are combined here as requested. To keep it easy
+ * to read, each section is broken down into local functions (not separate files)
+ * with comments above them explaining their respective functions:
  *
- *   Navbar()  -> header sticky: logo, menu, tombol "Hubungi"
- *   Hero()    -> section paling atas: judul besar + foto (placeholder)
- *   About()   -> section "About Me": bio singkat + 3 fakta cepat
- *   Skills()  -> grid keahlian & teknologi
- *   Projects()-> grid portfolio project (masih data contoh)
- *   Cta()     -> ajakan kontak/kolaborasi
- *   Footer()  -> baris hak cipta paling bawah
+ *   Navbar()  -> sticky header: logo, menu, "Contact" button
+ *   Hero()    -> topmost section: big title + photo (placeholder)
+ *   About()   -> "About Me" section: short bio + 3 quick facts
+ *   Skills()  -> skills & technology grid
+ *   Projects()-> portfolio project grid (still example data)
+ *   Cta()     -> contact/collaboration call-to-action
+ *   Footer()  -> bottom copyright row
  *
- * Home() di paling bawah cuma menyusun urutan section-section di atas.
- * Kalau mau ubah urutan tampilan, tinggal pindah urutan pemanggilan
- * komponen di dalam Home().
+ * Home() at the very bottom just arranges the order of the sections above.
+ * If you want to change the display order, simply move the component
+ * call order inside Home().
  * ===========================================================================
  */
 
 // ---------------------------------------------------------------------------
-// DATA — dikumpulkan di atas biar gampang diedit tanpa bongkar JSX di bawah
+// DATA — collected above for easy editing without dismantling the JSX below
 // ---------------------------------------------------------------------------
 
 const NAV_LINKS = [
@@ -31,42 +31,42 @@ const NAV_LINKS = [
 ];
 
 const SKILLS = [
-  { title: "Web Dasar", desc: "HTML, CSS, JavaScript" },
+  { title: "Basic Web", desc: "HTML, CSS, JavaScript" },
   { title: "Framework", desc: "Next.js, Tailwind CSS" },
   { title: "Python", desc: "Computer Vision, Tracking" },
   { title: "Tools", desc: "Git, GitHub, Vercel" },
 ];
 
 const FACTS = [
-  { label: "FOKUS", value: "Frontend Dev" },
-  { label: "STATUS", value: "Pelajar" },
-  { label: "MINAT LAIN", value: "Data & Saham" },
+  { label: "FOCUS", value: "Frontend Dev" },
+  { label: "STATUS", value: "Student" },
+  { label: "OTHER INTERESTS", value: "Data & Stocks" },
 ];
 
-// *contoh placeholder* — ganti title/desc/tags/href sesuai project asli kamu
+// *placeholder example* — replace title/desc/tags/href according to your actual project
 const PROJECTS = [
   {
     title: "Portfolio Website",
-    desc: "Website personal dibangun dengan Next.js & Tailwind CSS, fokus pada performa dan desain minimalis.",
+    desc: "Personal website built with Next.js & Tailwind CSS, focusing on performance and minimalist design.",
     tags: ["Next.js", "Tailwind"],
     href: "#",
   },
   {
-    title: "Dashboard Analisis Saham",
-    desc: "Dashboard untuk memantau saham perbankan dividen tinggi dan pergerakan structured warrants.",
+    title: "Stock Analysis Dashboard",
+    desc: "Dashboard to monitor high dividend banking stocks and structured warrants movements.",
     tags: ["Python", "Data"],
     href: "#",
   },
   {
     title: "Object Tracking App",
-    desc: "Eksperimen computer vision untuk mendeteksi dan melacak objek secara real-time dengan Python.",
+    desc: "Computer vision experiment to detect and track objects in real-time with Python.",
     tags: ["OpenCV", "Python"],
     href: "#",
   },
 ];
 
 // ---------------------------------------------------------------------------
-// Navbar — header sticky di atas halaman
+// Navbar — sticky header at the top of the page
 // ---------------------------------------------------------------------------
 function Navbar() {
   return (
@@ -96,14 +96,14 @@ function Navbar() {
 }
 
 // ---------------------------------------------------------------------------
-// Hero — section perkenalan paling atas
+// Hero — top introduction section
 //
-// Foto di kanan MASIH PLACEHOLDER. Cara ganti dengan fotomu:
-//   1. Taruh file di /public, misal /public/photo.jpg
-//   2. import Image from "next/image"; di baris paling atas file ini
-//   3. Ganti isi <div className="photo-frame ..."> dengan:
+// Photo on the right is STILL A PLACEHOLDER. How to replace it with your photo:
+//   1. Put the file in /public, e.g., /public/photo.jpg
+//   2. import Image from "next/image"; at the very top of this file
+//   3. Replace the content of <div className="photo-frame ..."> with:
 //        <Image src="/photo.jpg" alt="Rencaesar Rochwidias" fill className="object-cover" />
-//      (tambahkan class "relative" ke div pembungkusnya karena `fill` butuh parent relative)
+//      (add the "relative" class to its wrapper div because `fill` needs a relative parent)
 // ---------------------------------------------------------------------------
 function Hero() {
   return (
@@ -115,30 +115,21 @@ function Hero() {
           </span>
 
           <h1 className="font-display text-5xl md:text-6xl font-bold leading-[1.05] mb-6 text-[var(--ice)]">
-            My name
+            My name is
             <br />
-            <span className="text-transparent bg-clip-text bg-blue-600">
-              is Ren
+            <span className="text-transparent bg-clip-text bg-blue-500">
+              Rochwidias
             </span>
           </h1>
 
           <p className="text-base md:text-lg max-w-md mb-8 leading-relaxed text-[var(--muted)]">
-            Frontend Web Developer yang fokus membangun pengalaman digital yang bersih, interaktif, dan responsif —
-            dari antarmuka web sampai eksplorasi data.
+            Frontend Web Developer focused on building clean, interactive, and responsive digital experiences —
+            from web interfaces to data exploration.
           </p>
-
-          <div className="flex flex-wrap gap-4">
-            <a href="#kontak" className="btn-primary text-white font-semibold py-3 px-8 rounded-xl font-display">
-              Hubungi Saya
-            </a>
-            <a href="#project" className="btn-ghost text-white font-semibold py-3 px-8 rounded-xl font-display">
-              Lihat Project
-            </a>
-          </div>
         </div>
 
         <div className="relative flex justify-center lg:justify-end">
-          {/* PLACEHOLDER foto — lihat komentar di atas fungsi Hero() */}
+          {/* PLACEHOLDER photo — see comments above the Hero() function */}
           <div className="photo-frame glass w-full max-w-sm aspect-[4/5] relative flex flex-col items-center justify-center gap-3 text-center px-6">
             <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="1.5">
               <circle cx="12" cy="8" r="4" />
@@ -148,7 +139,7 @@ function Hero() {
               <br />
               <img 
                 src="/muka.jpg" 
-                alt="Foto Profil" 
+                alt="Profile Photo" 
                 className="w-full h-full object-cover absolute top-0 left-0 rounded-2xl" 
               />
             </p>
@@ -160,7 +151,7 @@ function Hero() {
 }
 
 // ---------------------------------------------------------------------------
-// About — section "About Me": avatar placeholder + bio + fakta singkat
+// About — "About Me" section: placeholder avatar + bio + quick facts
 // ---------------------------------------------------------------------------
 function About() {
   return (
@@ -177,14 +168,14 @@ function About() {
 
         <div className="md:col-span-3">
           <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">ABOUT ME</span>
-          <h2 className="font-display text-3xl font-bold mt-3 mb-5 text-[var(--ice)]">Sedikit tentang saya</h2>
+          <h2 className="font-display text-3xl font-bold mt-3 mb-5 text-[var(--ice)]">A little bit about me</h2>
           <p className="leading-relaxed mb-4 text-[var(--muted)]">
-            Saya pelajar sekaligus Frontend Web Developer yang antusias membangun pengalaman digital yang interaktif,
-            bersih, dan responsif menggunakan ekosistem React dan Next.js.
+            I am a student and a Frontend Web Developer passionate about building interactive,
+            clean, and responsive digital experiences using the React and Next.js ecosystem.
           </p>
           <p className="leading-relaxed mb-8 text-[var(--muted)]">
-            Di luar coding, saya juga aktif memantau pasar saham — khususnya saham perbankan dividen tinggi — dan
-            bereksperimen dengan Python untuk computer vision & tracking.
+            Outside of coding, I actively monitor the stock market — especially high dividend banking stocks — and
+            experiment with Python for computer vision & tracking.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -202,15 +193,15 @@ function About() {
 }
 
 // ---------------------------------------------------------------------------
-// Skills — grid keahlian & teknologi
+// Skills — skills & technology grid
 // ---------------------------------------------------------------------------
 function Skills() {
   return (
     <section id="skills" className="py-24">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">KEAHLIAN & TEKNOLOGI</span>
-          <h2 className="font-display text-3xl font-bold mt-3 text-[var(--ice)]">Tools yang saya pakai</h2>
+          <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">SKILLS & TECHNOLOGY</span>
+          <h2 className="font-display text-3xl font-bold mt-3 text-[var(--ice)]">Tools I use</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -227,7 +218,7 @@ function Skills() {
 }
 
 // ---------------------------------------------------------------------------
-// Projects — grid portfolio project (PROJECTS di atas masih data contoh)
+// Projects — portfolio project grid (PROJECTS above is still example data)
 // ---------------------------------------------------------------------------
 function Projects() {
   return (
@@ -235,8 +226,8 @@ function Projects() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           <span className="font-mono text-xs eyebrow text-[var(--blue-300)]">PROJECT</span>
-          <h2 className="font-display text-3xl font-bold mt-3 text-[var(--ice)]">Beberapa hal yang saya kerjakan</h2>
-          <p className="font-mono text-xs mt-3 text-[var(--muted)]">*contoh placeholder — ganti dengan project asli kamu</p>
+          <h2 className="font-display text-3xl font-bold mt-3 text-[var(--ice)]">Some things I've worked on</h2>
+          <p className="font-mono text-xs mt-3 text-[var(--muted)]">*placeholder example — replace with your actual projects</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -254,7 +245,7 @@ function Projects() {
                   ))}
                 </div>
                 <a href={project.href} className="text-sm font-semibold text-[var(--blue-300)]">
-                  Lihat Detail →
+                  View Details →
                 </a>
               </div>
             </div>
@@ -266,17 +257,17 @@ function Projects() {
 }
 
 // ---------------------------------------------------------------------------
-// Cta — panel ajakan kontak/kolaborasi
+// Cta — contact/collaboration call-to-action panel
 // ---------------------------------------------------------------------------
 function Cta() {
   return (
     <section id="kontak" className="max-w-6xl mx-auto px-6 lg:px-8 pb-24">
       <div className="glass rounded-3xl p-10 md:p-14 text-center">
         <h2 className="font-display text-2xl md:text-3xl font-bold mb-3 text-[var(--ice)]">
-          Tertarik untuk berkolaborasi?
+          Interested in collaborating?
         </h2>
         <p className="max-w-xl mx-auto mb-8 text-[var(--muted)]">
-          Terbuka untuk diskusi proyek, kolaborasi, atau sekadar ngobrol soal frontend dan data.
+          Open for project discussions, collaborations, or just chatting about frontend and data.
         </p>
         <a
           href="https://github.com/Rochwidias"
@@ -284,7 +275,7 @@ function Cta() {
           rel="noopener noreferrer"
           className="inline-block btn-primary text-white font-semibold py-3 px-8 rounded-xl font-display"
         >
-          Hubungi via GitHub
+          Contact via GitHub
         </a>
       </div>
     </section>
@@ -292,18 +283,18 @@ function Cta() {
 }
 
 // ---------------------------------------------------------------------------
-// Footer — baris hak cipta paling bawah
+// Footer — bottom copyright row
 // ---------------------------------------------------------------------------
 function Footer() {
   return (
     <footer className="py-8 border-t border-[var(--surface-border)] text-center font-mono text-xs text-[var(--muted)]">
-      <p>&copy; {new Date().getFullYear()} Rencaesar Rochwidias — Dibuat dengan Next.js & Tailwind CSS</p>
+      <p>&copy; {new Date().getFullYear()} Rencaesar Rochwidias — Built with Next.js & Tailwind CSS</p>
     </footer>
   );
 }
 
 // ---------------------------------------------------------------------------
-// Home — merangkai semua section di atas. Ini satu-satunya export dari file.
+// Home — assembles all the sections above. This is the only export of the file.
 // ---------------------------------------------------------------------------
 export default function Home() {
   return (
