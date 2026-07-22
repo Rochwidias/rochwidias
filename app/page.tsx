@@ -146,13 +146,13 @@ function Hero() {
             </svg>
             <p className="font-mono text-xs text-[var(--muted)]">
               <br />
-              <image src="/rochwidias/public/muka.jpg"></image>
+              {/* Menggunakan tag img standar. Pastikan muka.jpg ada langsung di dalam folder 'public' */}
+              <img 
+                src="/muka.jpg" 
+                alt="Foto Rencaesar" 
+                className="w-full h-full object-cover absolute top-0 left-0 rounded-2xl" 
+              />
             </p>
-          </div>
-
-          <div className="chip absolute -bottom-4 left-4 md:left-0 rounded-xl px-4 py-2.5 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-400" />
-            <span className="font-mono text-xs text-[var(--ice)]">Terbuka untuk kolaborasi</span>
           </div>
         </div>
       </div>
