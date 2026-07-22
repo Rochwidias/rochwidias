@@ -146,10 +146,9 @@ function Hero() {
             </svg>
             <p className="font-mono text-xs text-[var(--muted)]">
               <br />
-              {/* Menggunakan tag img standar. Pastikan muka.jpg ada langsung di dalam folder 'public' */}
               <img 
                 src="/muka.jpg" 
-                alt="Foto Rencaesar" 
+                alt="Foto Profil" 
                 className="w-full h-full object-cover absolute top-0 left-0 rounded-2xl" 
               />
             </p>
