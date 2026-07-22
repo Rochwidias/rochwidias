@@ -15,14 +15,14 @@ My projects range from financial utility tools, such as savings management web a
 
 **Front-End Development:**
 
-* HTML5 (Semantic Web)
-* CSS3 (Responsive Layouts, Flexbox, Grid)
-* JavaScript (DOM Manipulation, ES6+)
+* HTML5
+* CSS3
+* JavaScript
 
 **Software & Scripting:**
 
-* Python (Scripting, Automation, Object-Oriented Programming)
-* OpenCV / Computer Vision Integration
+* Python
+* OpenCV
 
 **Workflow & Platforms:**
 
