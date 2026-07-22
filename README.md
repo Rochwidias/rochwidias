@@ -29,15 +29,3 @@ My projects range from financial utility tools, such as savings management web a
 * Git & GitHub (Version Control)
 * Vercel (Deployment & Hosting)
 * Visual Studio Code
-
----
-
-## 📈 GitHub Stats
-
----
-
-## 📬 Let's Connect
-
-Whether you want to collaborate on front-end projects, discuss Python implementations in computer vision, or analyze capital market trends, I am always open to connecting with fellow developers and professionals.
-
-* **Portfolio Website:** [rochwidias.vercel.app](https://rochwidias.vercel.app)
