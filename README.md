@@ -15,29 +15,17 @@ My projects range from financial utility tools, such as savings management web a
 
 **Front-End Development:**
 
-* HTML5 (Semantic Web)
-* CSS3 (Responsive Layouts, Flexbox, Grid)
-* JavaScript (DOM Manipulation, ES6+)
+* HTML5
+* CSS3
+* JavaScript
 
 **Software & Scripting:**
 
-* Python (Scripting, Automation, Object-Oriented Programming)
-* OpenCV / Computer Vision Integration
+* Python
+* OpenCV
 
 **Workflow & Platforms:**
 
 * Git & GitHub (Version Control)
 * Vercel (Deployment & Hosting)
 * Visual Studio Code
-
----
-
-## 📈 GitHub Stats
-
----
-
-## 📬 Let's Connect
-
-Whether you want to collaborate on front-end projects, discuss Python implementations in computer vision, or analyze capital market trends, I am always open to connecting with fellow developers and professionals.
-
-* **Portfolio Website:** [rochwidias.vercel.app](https://rochwidias.vercel.app)
