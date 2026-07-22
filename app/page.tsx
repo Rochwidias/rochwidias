@@ -146,7 +146,7 @@ function Hero() {
             </svg>
             <p className="font-mono text-xs text-[var(--muted)]">
               <br />
-              (public/muka.jpg)
+              <image src="/rochwidias/public/muka.jpg"></image>
             </p>
           </div>
 
