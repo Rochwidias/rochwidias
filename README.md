@@ -1,10 +1,10 @@
 <div align="center">
 
-# 👋 Halo, Saya Ren Rochwidias
+# 👋 Hi, I'm Ren Rochwidias
 
 ### 🚀 Bot Developer · AI Enthusiast · Founder of Kedai Nusantara
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3200&pause=600&color=38BDF8&center=true&vCenter=true&width=650&lines=Hi%2C+I'm+Ren+Rochwidias+%F0%9F%91%8B;Python+%26+AI+Chatbot+Developer;Bot+Developer+%2F+AI+Enthusiast;Creator+of+Kedai+Nusantara+%F0%9F%8C%B1;Bagi+Yuk+Yang+Suka+Hasil+Bumi!)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3200&pause=600&color=38BDF8&center=true&vCenter=true&width=650&lines=Hi%2C+I'm+Ren+Rochwidias+%F0%9F%91%8B;Python+%26+AI+Chatbot+Developer;Bot+Developer+%2F+AI+Enthusiast;Creator+of+Kedai+Nusantara+%F0%9F%8C%B1;Fresh+Harvest%2C+Straight+to+Your+Kitchen!)
 
 [![Website](https://img.shields.io/badge/Website-rochwidias.vercel.app-38BDF8?style=for-the-badge&logo=vercel&logoColor=white)](https://rochwidias.vercel.app)
 [![Store](https://img.shields.io/badge/Web%20Shop-Kedai%20Nusantara-16A34A?style=for-the-badge&logo=shopify&logoColor=white)](https://rochwidias-store.vercel.app)
@@ -13,61 +13,61 @@
 
 ---
 
-## 🧑‍💻 Tentang Saya
+## 🧑‍💻 About Me
 
-- 🔭 Saat ini fokus mengembangkan **AI chatbot** untuk platform Discord & Telegram
-- 🤖 Membuat bot dengan fitur: **music player**, **AI chat multimodal**, **anti-spam**, **streaming response**
-- 🌱 Belajar **Python**, integrasi **Google Gemini AI**, dan pengembangan bot skala production
-- ☁️ Terbiasa deploy 24/7 dengan **Railway** + persistence **Supabase (PostgreSQL)**
-- 🎵 Fun fact: Bot Discord bernama **WhoTao**, bot Telegram bernama **BotJawir**
-- 🛒 Founder **Kedai Nusantara** — toko hasil bumi asli Nusantara
+- 🔭 Currently focused on building **AI chatbots** for Discord & Telegram
+- 🤖 Building bots with features: **music player**, **multimodal AI chat**, **anti-spam**, **streaming responses**
+- 🌱 Learning **Python**, **Google Gemini AI** integration, and building production-grade bots
+- ☁️ Comfortable with 24/7 deployments on **Railway** + persistence with **Supabase (PostgreSQL)**
+- 🎵 Fun fact: Discord bot named **WhoTao**, Telegram bot named **BotJawir**
+- 🛒 Founder of **Kedai Nusantara** — authentic Nusantara farm produce store
 
 ---
 
-## 🌱 Kedai Nusantara — Dari Kebun ke Dapurmu
+## 🌱 Kedai Nusantara — From the Farm to Your Kitchen
 
-Bukan cuma ngoding, aku juga punya usaha di bidang **hasil bumi**. Toko online **Kedai Nusantara** menjual **kopi, teh, rempah, dan beras** pilihan langsung dari kebun — 100% asli, tanpa campuran, dipetik segar setiap musim panen.
+Not just coding — I also run a business in **farm produce**. My online store **Kedai Nusantara** sells **coffee, tea, spices, and rice** picked straight from the farm — 100% authentic, no mixing, freshly harvested every season.
 
 <div align="center">
 
 ### ☕ Kedai Nusantara
 
-Kopi · Teh · Rempah · Beras — 100% asli dari kebun
+Coffee · Tea · Spices · Staples — 100% straight from the farm
 
-[![Buka Store](https://img.shields.io/badge/Buka%20Store%20→-16A34A?style=for-the-badge&logo=shopify&logoColor=white)](https://rochwidias-store.vercel.app)
+[![Visit Store](https://img.shields.io/badge/Shop%20Store%20→-16A34A?style=for-the-badge&logo=shopify&logoColor=white)](https://rochwidias-store.vercel.app)
 
 </div>
 
 <table align="center">
   <tr>
-    <td align="center"><b>☕ Kopi</b><br/>Arabika Gayo & Robusta Lampung</td>
-    <td align="center"><b>🍵 Teh</b><br/>Hijau, Hitam Ceylon & Melati</td>
-    <td align="center"><b>🌿 Rempah</b><br/>Kunyit, Cengkeh, Kayu Manis & Lada</td>
-    <td align="center"><b>🌾 Sembako</b><br/>Beras Merah Organik & Gula Aren</td>
+    <td align="center"><b>☕ Coffee</b><br/>Arabica Gayo & Robusta Lampung</td>
+    <td align="center"><b>🍵 Tea</b><br/>Green, Ceylon Black & Jasmine</td>
+    <td align="center"><b>🌿 Spice</b><br/>Turmeric, Cloves, Cinnamon & Pepper</td>
+    <td align="center"><b>🌾 Staples</b><br/>Organic Brown Rice & Palm Sugar</td>
   </tr>
 </table>
 
-> ✨ Bayar gampang via **QRIS**, konfirmasi via **WhatsApp**, dikirim **1–3 hari kerja** ke seluruh Indonesia.
+> ✨ Easy checkout via **QRIS**, **WhatsApp** confirmation, delivered in **1-3 working days** across Indonesia.
 
 <p align="center">
-  <a href="https://rochwidias-store.vercel.app"><img src="https://img.shields.io/badge/Beli%20Produk%20→-16A34A?style=for-the-badge&logo=shopping-cart&logoColor=white&labelColor=16A34A&color=166534" /></a>
+  <a href="https://rochwidias-store.vercel.app"><img src="https://img.shields.io/badge/Shopping%20Now%20→-16A34A?style=for-the-badge&logo=shopping-cart&logoColor=white&labelColor=16A34A&color=166534" /></a>
 </p>
 
 ---
 
-## 🤖 Proyek Unggulan
+## 🤖 Featured Projects
 
-| 🚀 Proyek | Deskripsi | Stack |
+| 🚀 Project | Description | Stack |
 | --- | --- | --- |
-| 🎵 [WhoTao Discord Bot](https://github.com/Rochwidias/bot-discord-with-gemini-api-key) | Multi-purpose Discord bot: music player + AI chat, auto-restart, 24/7 di Railway | Python, discord.py, Gemini AI, Supabase, yt-dlp |
-| 💬 [BotJawir Telegram Bot](https://github.com/Rochwidias/bot-telegram-chat-bot-with-gemini-api) | Telegram AI bot: streaming response, analisis gambar (vision), anti-spam & cooldown | Python, python-telegram-bot, Gemini AI |
-| 🏪 [Kedai Nusantara](https://rochwidias-store.vercel.app) | E-commerce hasil bumi: katalog produk, keranjang, checkout & pembayaran QRIS | Next.js, Tailwind CSS, Vercel |
+| 🎵 [WhoTao Discord Bot](https://github.com/Rochwidias/bot-discord-with-gemini-api-key) | Multi-purpose Discord bot: music player + AI chat, auto-restart, 24/7 on Railway | Python, discord.py, Gemini AI, Supabase, yt-dlp |
+| 💬 [BotJawir Telegram Bot](https://github.com/Rochwidias/bot-telegram-chat-bot-with-gemini-api) | Telegram AI bot: streaming responses, image (vision) analysis, anti-spam & cooldown | Python, python-telegram-bot, Gemini AI |
+| 🏪 [Kedai Nusantara Store](https://rochwidias-store.vercel.app) | E-commerce for farm produce: product catalog, cart, checkout & QRIS payment | Next.js, Tailwind CSS, Vercel |
 
 ---
 
 ## 🛠️ Tech Stack
 
-![Python](https://img.shields.io/badge/Python-00E5FF?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
 ![discord.py](https://img.shields.io/badge/discord.py-5865F2?style=for-the-badge&logo=discord&logoColor=white)
 ![Telegram Bot](https://img.shields.io/badge/Telegram_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
@@ -80,7 +80,7 @@ Kopi · Teh · Rempah · Beras — 100% asli dari kebun
 
 ---
 
-## 📊 Statistik GitHub
+## 📊 GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Rochwidias&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" />
@@ -93,12 +93,12 @@ Kopi · Teh · Rempah · Beras — 100% asli dari kebun
 
 ---
 
-## 📫 Hubungi Saya
+## 📫 Get in Touch
 
 [![Website](https://img.shields.io/badge/Website-rochwidias.vercel.app-38BDF8?style=flat-square&logo=vercel&logoColor=white)](https://rochwidias.vercel.app)
-[![Store](https://img.shields.io/badge/Store-Kedai%20Nusantara-16A34A?style=flat-square&logo=shopify&logoColor=white)](https://rochwidias-store.vercel.app)
+[![Store](https://img.shields.io/badge/Shop-Kedai%20Nusantara-16A34A?style=flat-square&logo=shopify&logoColor=white)](https://rochwidias-store.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Rochwidias-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Rochwidias)
 
 ---
 
-*Terima kasih sudah mampir! Jangan lupa ⭐ repo-repo saya jika bermanfaat 😄*
+*Thanks for stopping by! Don't forget to ⭐ my repos if they're helpful 😄*
